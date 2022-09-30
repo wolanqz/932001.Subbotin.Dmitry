@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style>
+            body {
+                color: white;
+            }
+
+            div {
+                width: 160px;
+                height: 100px;
+            }
+
+            #static_div {
+                background-color: blueviolet;
+            }
+
+            #relative_div1 {
+                position: relative;
+                background-color: darkred;
+            }
+
+            #relative_div2 {
+                position: relative;
+                top: 55px;
+                left: 30px;
+                background-color: peru;
+            }
+
+            #relative_div3 {
+                width: 600px;
+                height: 400px;
+                margin-top: 100px;
+                position: relative;
+                background-color: indianred;
+            }
+
+            #absolute_div {
+                width: 300px;
+                height: 200px;
+                position: absolute;
+                top: 130px;
+                left: 300px;
+                background-color: indigo;
+            }
+
+            #fixed_div {
+                position: fixed;
+                bottom: 0;
+                right: 0;
+                width: 100px;
+                background-color: forestgreen;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="static_div">
+            It's a static div!
+        </div>
+
+        <div id="relative_div1">
+            It's a relative div!
+            <div id="relative_div2">
+                It's a relative div!
+            </div>
+        </div>
+        
+        <div id="relative_div3">
+            It's a relative div!
+            <div id="absolute_div">
+                It's an absolute div with relative parent!
+            </div>
+        </div>
+
+        <div id="fixed_div">
+            It's a fixed div!
+        </div>
+    </body>
+</html>
