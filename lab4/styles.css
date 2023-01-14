@@ -1,0 +1,131 @@
+body {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+::selection {
+    color: green;
+    background-color: #d0d0d0;
+}
+
+header {
+    /* text-align: center; */
+    padding-left: 15%;
+    color: white;
+    background-color: #507299;
+    position: sticky;
+    top: 0;
+}
+
+footer {
+    height: 2%;
+    padding: 5px;
+    text-align: center;
+    color: gray;
+    background-color: white;
+}
+
+.body-flex {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    background-color: #edeef0;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 9em;
+    padding: 1em 1em 0 1em;
+    /* background-color: red; */
+}
+
+nav a {
+    /* display: block; */
+    /* margin-bottom: 1em; */
+    padding: 0.5em;
+    color: #507299;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #e1e5eb;
+}
+
+.content-column {
+    display: flex;
+    flex-direction: column;
+    /* flex: 0 0 30em; */
+    /* flex-basis: 30em; */
+    padding: 1em;
+}
+
+.pub {
+    width: 26em;
+    margin-bottom: 1em;
+    padding: 1em;
+    border: 1px solid #d0d0d0;
+    border-radius: 10px;
+    text-align: justify;
+    background-color: white;
+}
+
+/* .pub_activity_row {
+    border-top: 2px solid #d0d0d0;
+    display: flex;
+}
+
+.pub_activity_row button {
+    border: none;
+    padding: 0;
+    background-color: inherit;
+}
+
+.pub_activity_row div {
+    flex-grow: 1;
+} */
+
+.pub_activity_row {
+    border-top: 2px solid #d0d0d0;
+    display: flex;
+}
+
+.pub_activity_row button {
+    border: none;
+    padding: 0;
+    background-color: inherit;
+}
+
+.pub_activity_row div:nth-child(2n) {
+    flex-grow: 1;
+}
+
+.sticky_column {
+    width: 100px;
+    position: sticky;
+    top: 20px;
+    right: 20px;
+    top: 3em;
+}
+
+/* .pub_activity_row button:last-child {
+    float: right;
+} */
+
+@media all and (max-width: 42em) {
+    .body-flex {
+        /* background-color: pink; */
+        flex-direction: column;
+    }
+
+    nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
