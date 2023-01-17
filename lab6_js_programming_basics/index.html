@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>index.html</title>
+        <style>
+            body {
+                min-width: 100%;
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            #main_window {
+                width: 50em;
+                margin: 0 auto;
+            }
+
+            #menu {
+                display: flex;
+                width: 100%;
+                height: 3em;
+            }
+
+            #menu button {
+                flex-basis: 33.33333333%;
+                font-size: large;
+                color: white;
+                background-color: red;
+            }
+
+            #menu button:hover {
+                background-color: rgb(255, 81, 81);
+            }
+
+            #view_window {
+                height: 420px;
+                margin: 0;
+                padding: 0;
+                display: flex;
+            }
+
+            #view_window div {
+                margin: 0;
+                padding: 2%;
+                float: left;
+            }
+
+            #view_window img {
+                max-width: 100%;
+                display: flex;
+                height: 300px;
+            }
+
+            #left_column {
+                width: 100%;
+                background-color: blue;
+            }
+
+            #right_column {
+                width: 100%;
+                background-color: green;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="main_window">
+            <div id="menu">
+                <button onclick="left()">Левая колонка</button>
+                <button onclick="both()">Обе две</button>
+                <button onclick="right()">Правая колонка</button>
+            </div>
+            <div id="view_window">
+                <div id="left_column">
+                    <img id="left_img" src="original_materials/cat.jpg"></img>
+                </div>
+                <div id="right_column">
+                    <img id="right_img" src="original_materials/dog.jpg"></img>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="script.js"></script>
+</html>

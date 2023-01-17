@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>index.html</title>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                min-width: 100%;
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .news {
+                margin: 0 auto;
+                width: 53em;
+                padding: 1em 1.5em 1em 1.5em;
+                border-bottom: 2px solid black;
+                background-color: #b7f5f5;
+                box-shadow: 0 0 5px 1px rgba(61, 61, 68, 0.473);
+            }
+
+            .news:hover {
+                background-color: #ff5454;
+            }
+
+            .news h2 {
+                margin: 0;
+            }
+
+            .news p {
+                margin: 0.5em 0 0.5em 0;
+            }
+
+            .news button {
+                display: block;
+                margin: 1em auto 0 auto;
+                padding: 0.6em 0.7em;
+                color: white;
+                border: 0;
+                background: linear-gradient(to bottom, #02f202 0%, #009400 100%);
+                box-shadow: 0 0 5px 1px rgba(61, 61, 68, 0.473);
+            }
+
+            .for_popup_header, .for_popup_content {
+                display: none;
+            }
+
+            .popup {
+                display: none;
+                position: fixed;
+                left: 0;
+                top: 0;
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(255, 255, 255, 0.726);
+            }
+
+            .popup .popup_content {
+                width: 31em;
+                margin: auto;
+                margin-top: 15%;
+                padding: 1em 1.2em;
+                background-color: #e2ff74;
+            }
+
+            .popup .popup_content h1 {
+                width: 100%;
+                text-align: center;
+            }
+
+            .popup .popup_content :first-child {
+                margin-top: 0;
+            }
+
+            .popup .popup_content :last-child {
+                margin-bottom: 0;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="news">
+            <h2>Новость 1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae voluptatum suscipit sed delectus facere veritatis autem quisquam unde nam doloribus?
+            </p>
+            <button onClick="document.getElementById('popup_1').style.display = 'block'">Открыть всплывающее окно</button>
+        </div>
+
+        <div class="news">
+            <h2>Новость 2</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae voluptatum suscipit sed delectus facere veritatis autem quisquam unde nam doloribus?
+            </p>
+            <button onClick="document.getElementById('popup_2').style.display = 'block'">Открыть всплывающее окно</button>
+        </div>
+
+        <div class="news">
+            <h2>Новость 3</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae voluptatum suscipit sed delectus facere veritatis autem quisquam unde nam doloribus?
+            </p>
+            <button onClick="document.getElementById('popup_3').style.display = 'block'">Открыть всплывающее окно</button>
+        </div>
+
+        <div class="popup" id="popup_1" onclick="document.getElementById('popup_1').style.display = 'none'">
+            <div class="popup_content">
+                <h1>
+                    Новость 1
+                </h1>
+                <p>
+                    Новость 1: Lorem ipsum dolor sit amet consectetur adipisicing elit. A, alias.<br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam hic, ipsa, ullam, cupiditate eveniet at voluptate corrupti commodi nobis ratione voluptatem! Vel animi totam cupiditate doloribus ad ab exercitationem officia eveniet impedit? Deleniti quasi nisi consectetur perspiciatis quibusdam nostrum, enim perferendis nam, magni molestias recusandae id libero vitae, repudiandae praesentium.
+                </p>
+            </div>
+        </div>
+
+        <div class="popup" id="popup_2" onclick="document.getElementById('popup_2').style.display = 'none'">
+            <div class="popup_content">
+                <h1>
+                    Новость 2
+                </h1>
+                <p>
+                    Новость 2: Lorem ipsum dolor sit amet consectetur adipisicing elit. A, alias.<br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam hic, ipsa, ullam, cupiditate eveniet at voluptate corrupti commodi nobis ratione voluptatem! Vel animi totam cupiditate doloribus ad ab exercitationem officia eveniet impedit? Deleniti quasi nisi consectetur perspiciatis quibusdam nostrum, enim perferendis nam, magni molestias recusandae id libero vitae, repudiandae praesentium.
+                </p>
+            </div>
+        </div>
+
+        <div class="popup" id="popup_3" onclick="document.getElementById('popup_3').style.display = 'none'">
+            <div class="popup_content">
+                <h1>
+                    Новость 3
+                </h1>
+                <p>
+                    Новость 3: Lorem ipsum dolor sit amet consectetur adipisicing elit. A, alias.<br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam hic, ipsa, ullam, cupiditate eveniet at voluptate corrupti commodi nobis ratione voluptatem! Vel animi totam cupiditate doloribus ad ab exercitationem officia eveniet impedit? Deleniti quasi nisi consectetur perspiciatis quibusdam nostrum, enim perferendis nam, magni molestias recusandae id libero vitae, repudiandae praesentium.
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
